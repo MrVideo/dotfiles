@@ -111,3 +111,4 @@ export JAVA_HOME="/Applications/Android Studio.app/Contents/jre/jdk/Contents/Hom
 #export PATH="$PATH:/usr/local/bin"
 [ -f "/Users/mario/.ghcup/env" ] && source "/Users/mario/.ghcup/env" # ghcup-env
 alias config='git --git-dir=/Users/mario/.dotfiles --work-tree=/Users/mario'
+alias ll='ls -alh'
