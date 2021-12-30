@@ -110,5 +110,4 @@ export PATH="$PATH:/usr/local/texlive/2020/bin/x86_64-darwin"
 export JAVA_HOME="/Applications/Android Studio.app/Contents/jre/jdk/Contents/Home"
 #export PATH="$PATH:/usr/local/bin"
 [ -f "/Users/mario/.ghcup/env" ] && source "/Users/mario/.ghcup/env" # ghcup-env
-alias config='git --git-dir=/Users/mario/.dotfiles --work-tree=/Users/mario'
-alias ll='ls -alh'
+alias config='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
