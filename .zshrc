@@ -102,12 +102,12 @@ export PATH="/opt/homebrew/bin:$PATH"
 
 eval $(thefuck --alias)
 
-# alias python="python3"
+alias python="python3"
 
 export PATH="$PATH:/usr/local/texlive/2020/texmf-dist/doc/man"
 export PATH="$PATH:/usr/local/texlive/2020/texmf-dist/doc/info"
 export PATH="$PATH:/usr/local/texlive/2020/bin/x86_64-darwin"
-export JAVA_HOME="/Applications/Android Studio.app/Contents/jre/jdk/Contents/Home"
 #export PATH="$PATH:/usr/local/bin"
 [ -f "/Users/mario/.ghcup/env" ] && source "/Users/mario/.ghcup/env" # ghcup-env
 alias config='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
+export PATH="/opt/homebrew/opt/python@3.10/bin:$PATH"
