@@ -8,7 +8,7 @@ export ZSH="/Users/mario/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="intheloop"
+ZSH_THEME="agnoster"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -111,3 +111,9 @@ export PATH="$PATH:/usr/local/texlive/2020/bin/x86_64-darwin"
 [ -f "/Users/mario/.ghcup/env" ] && source "/Users/mario/.ghcup/env" # ghcup-env
 alias config='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 export PATH="/opt/homebrew/opt/python@3.10/bin:$PATH"
+
+# 256 color terminal test
+alias colortest='curl -s https://gist.githubusercontent.com/HaleTom/89ffe32783f89f403bba96bd7bcd1263/raw/ | bash'
+
+# Python-compiled Vim for youcompleteme
+alias vim='/opt/homebrew/cellar/vim/8.2.5050/bin/vim'
