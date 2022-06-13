@@ -48,7 +48,7 @@ This works using a *git bare* repository. You can create one yourself following 
     Add the following line to your `.zshrc` to be able to easily add and commit to this repo:
 
     ```bash
-    alias config='git --git-dir=/Users/username/.dotfiles --work-tree=/Users/username
+    alias config='git --git-dir=/Users/username/.dotfiles --work-tree=/Users/username'
     ```
 
     This will make so that every time you want to add or commit stuff to your repo, you can easily do that from anywhere through the new alias `config add .file`.
