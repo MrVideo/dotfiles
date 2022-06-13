@@ -16,6 +16,9 @@ Plugin 'tpope/vim-commentary'			" Comment out lines automatically
 Plugin 'valloric/youcompleteme'			" Autocompletion engine
 Plugin 'raimondi/delimitmate'			" Automatically close bracket and quote pairs
 Plugin 'ap/vim-css-color'				" Shows a color preview for hex codes
+Plugin 'vim-pandoc/vim-pandoc'			" Pandoc support
+Plugin 'vim-pandoc/vim-pandoc-syntax'   " Pandoc syntax highlighting
+Plugin 'iamcco/markdown-preview.nvim'	" Dynamic MarkDown preview
 
 " Color themes through Vundle
 Plugin 'NLKNguyen/papercolor-theme'
@@ -39,7 +42,7 @@ set noshowmode							" To avoid the --INSERT-- text below the status bar
 
 " Autocomplete menu
 set wildmenu
-set wildmode=list:lastused				" Suggested value is the last used matching command 
+set wildmode=longest,list,full			" Suggested value is the last used matching command 
 set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx " Ignores non-plain text files
 set autochdir 							" Change working directory when opening a file
 
@@ -71,3 +74,11 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
+" Avoid syntax highlighting errors with LaTeX in MarkDown
+syn region math start=/\$\$/ end=/\$\$/
+syn match math '\$[^$].\{-}\$'
+hi link math Statement
+
+" Pandoc settings
+set nofoldenable						" Disable automatic folding
+set spelllang+=it                       " Add Italian to spell checker
