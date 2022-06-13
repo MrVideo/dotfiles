@@ -42,3 +42,6 @@ alias colortest='curl -s https://gist.githubusercontent.com/HaleTom/89ffe32783f8
 
 # Python-compiled Vim for youcompleteme
 alias vim='/opt/homebrew/cellar/vim/8.2.5050/bin/vim'
+
+# Pandoc MD2PDF custom script
+alias mdpdf='~/Scripts/pd-pdf.sh'

@@ -74,11 +74,6 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-" Avoid syntax highlighting errors with LaTeX in MarkDown
-syn region math start=/\$\$/ end=/\$\$/
-syn match math '\$[^$].\{-}\$'
-hi link math Statement
-
 " Pandoc settings
 set nofoldenable						" Disable automatic folding
-set spelllang+=it                       " Add Italian to spell checker
+set spelllang+=it						" Add spell checker for Italian and English
