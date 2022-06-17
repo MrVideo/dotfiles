@@ -41,7 +41,7 @@ export PATH="/opt/homebrew/opt/python@3.10/bin:$PATH"
 alias colortest='curl -s https://gist.githubusercontent.com/HaleTom/89ffe32783f89f403bba96bd7bcd1263/raw/ | bash'
 
 # Python-compiled Vim for youcompleteme
-alias vim='/opt/homebrew/cellar/vim/8.2.5050/bin/vim'
+alias vim='/opt/homebrew/Cellar/vim/8.2.5100/bin/vim'
 
 # Pandoc MD2PDF custom script
 alias mdpdf='~/.scripts/pd-pdf.sh'

@@ -7,11 +7,8 @@ $endif$
 $if(CJKmainfont)$
 \PassOptionsToPackage{space}{xeCJK}
 $endif$
-%
 \documentclass[
-$if(fontsize)$
-  fontsize,
-$endif$
+14pt,
 a4paper,
 $if(beamer)$
   ignorenonframetext,
@@ -25,7 +22,7 @@ $endif$
 $for(classoption)$
   $classoption$$sep$,
 $endfor$,
-]{$documentclass$}
+]{extarticle}
 % Load package for phase symbol
 \usepackage{steinmetz}
 % Use custom 2cm margin
