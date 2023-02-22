@@ -4,7 +4,7 @@ ZSH_THEME="agnoster"
 plugins=(git brew macos)
 source $ZSH/oh-my-zsh.sh
 export LANG=it_IT.UTF-8
-export EDITOR='vim'
+export EDITOR='nvim'
 export DEFAULT_USER='$USER'
 
 # Change terminal prompt to just username when logged on local machine
@@ -16,9 +16,10 @@ prompt_context() {
 
 # Homebrew package manager
 export PATH="/opt/homebrew/bin:$PATH"
+export PATH="/opt/homebrew/sbin:$PATH"
 
 # TheFuck autocorrect
-eval $(thefuck --alias)
+# eval $(thefuck --alias)
 
 # Alias for Python3
 alias python="python3"
@@ -29,7 +30,7 @@ export PATH="$PATH:/usr/local/texlive/2020/texmf-dist/doc/info"
 export PATH="$PATH:/usr/local/texlive/2020/bin/x86_64-darwin"
 
 # Haskell compiler
-[ -f "/Users/mario/.ghcup/env" ] && source "/Users/mario/.ghcup/env"
+# [ -f "/Users/mario/.ghcup/env" ] && source "/Users/mario/.ghcup/env"
 
 # Dotfiles config
 alias config='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
@@ -41,7 +42,17 @@ export PATH="/opt/homebrew/opt/python@3.10/bin:$PATH"
 alias colortest='curl -s https://gist.githubusercontent.com/HaleTom/89ffe32783f89f403bba96bd7bcd1263/raw/ | bash'
 
 # Python-compiled Vim for youcompleteme
-alias vim='/opt/homebrew/Cellar/vim/8.2.5100/bin/vim'
+# alias vim='/opt/homebrew/Cellar/vim/9.0.0150_1/bin/vim'
 
 # Pandoc MD2PDF custom script
 alias mdpdf='~/.scripts/pd-pdf.sh'
+
+# clang-14 install through brew
+# alias clang="/opt/homebrew/Cellar/llvm/14.0.6_1/bin/clang"
+
+# Neovim alias
+alias vim="nvim"
+alias v="nvim"
+
+# Obsidian vault shorthand
+alias ob="cd /Users/mario/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/Vault"

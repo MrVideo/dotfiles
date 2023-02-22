@@ -5,3 +5,5 @@ name = Mario Merlo
 email = 18537290+MrVideo@users.noreply.github.com
 [init]
 	defaultBranch = main
+[core]
+	autocrlf = input
