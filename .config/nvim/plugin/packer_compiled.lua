@@ -79,11 +79,6 @@ _G.packer_plugins = {
     path = "/Users/mario/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
-  ["clipboard-image.nvim"] = {
-    loaded = true,
-    path = "/Users/mario/.local/share/nvim/site/pack/packer/start/clipboard-image.nvim",
-    url = "https://github.com/ekickx/clipboard-image.nvim"
-  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/Users/mario/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -184,20 +179,20 @@ _G.packer_plugins = {
     path = "/Users/mario/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["toggleterm.nvim"] = {
+    loaded = true,
+    path = "/Users/mario/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
+    url = "https://github.com/akinsho/toggleterm.nvim"
+  },
+  undotree = {
+    loaded = true,
+    path = "/Users/mario/.local/share/nvim/site/pack/packer/start/undotree",
+    url = "https://github.com/mbbill/undotree"
+  },
   ["vim-fugitive"] = {
     loaded = true,
     path = "/Users/mario/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
-  },
-  ["vim-gutentags"] = {
-    loaded = true,
-    path = "/Users/mario/.local/share/nvim/site/pack/packer/start/vim-gutentags",
-    url = "https://github.com/ludovicchabant/vim-gutentags"
-  },
-  ["vim-rhubarb"] = {
-    loaded = true,
-    path = "/Users/mario/.local/share/nvim/site/pack/packer/start/vim-rhubarb",
-    url = "https://github.com/tpope/vim-rhubarb"
   }
 }
 
