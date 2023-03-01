@@ -34,9 +34,10 @@ return require('packer').startup(function(use)
 			{'rafamadriz/friendly-snippets'}, -- Optional
 		}
 	}
-	use 'davidgranstrom/nvim-markdown-preview'
+	use 'iamcco/markdown-preview.nvim'
 	use 'kyazdani42/nvim-web-devicons'
-	use 'nvim-lualine/lualine.nvim'
 	use 'lukas-reineke/indent-blankline.nvim'
 	use 'akinsho/toggleterm.nvim'
+	use 'ekickx/clipboard-image.nvim'
+	use 'nvim-lualine/lualine.nvim'
 end)

@@ -1,6 +1,13 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # General zsh settings
 export ZSH="/Users/mario/.oh-my-zsh"
-ZSH_THEME="agnoster"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 plugins=(git brew macos)
 source $ZSH/oh-my-zsh.sh
 export LANG=it_IT.UTF-8
@@ -8,11 +15,11 @@ export EDITOR='nvim'
 export DEFAULT_USER='$USER'
 
 # Change terminal prompt to just username when logged on local machine
-prompt_context() {
-    if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
-        prompt_segment black default "%(!.%{%F{yellow}%}.)$USER"
-    fi
-}
+#prompt_context() {
+#    if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
+#        prompt_segment black default "%(!.%{%F{yellow}%}.)$USER"
+#    fi
+#}
 
 # Homebrew package manager
 export PATH="/opt/homebrew/bin:$PATH"
@@ -56,3 +63,6 @@ alias v="nvim"
 
 # Obsidian vault shorthand
 alias ob="cd /Users/mario/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/Vault"
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

@@ -1,0 +1,20 @@
+local function getWords()
+	return tostring(vim.fn.wordcount().words)
+end
+
+local function changeSection()
+	if vim.bo.filetype == 'markdown' then
+		return getWords(), 'encoding', 'fileformat'
+	else return 'encoding', 'fileformat', 'filetype'
+	end
+end
+
+require('lualine').setup {
+	options = {
+		icons_enabled = true,
+		theme = 'auto'
+	},
+	sections = {
+		lualine_x = { changeSection() }
+	}
+}
