@@ -8,7 +8,7 @@ fi
 # General zsh settings
 export ZSH="/Users/mario/.oh-my-zsh"
 ZSH_THEME="powerlevel10k/powerlevel10k"
-plugins=(git brew macos)
+plugins=(git brew macos zsh-autosuggestions zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 export LANG=it_IT.UTF-8
 export EDITOR='nvim'
@@ -36,9 +36,6 @@ export PATH="$PATH:/usr/local/texlive/2020/texmf-dist/doc/man"
 export PATH="$PATH:/usr/local/texlive/2020/texmf-dist/doc/info"
 export PATH="$PATH:/usr/local/texlive/2020/bin/x86_64-darwin"
 
-# Haskell compiler
-# [ -f "/Users/mario/.ghcup/env" ] && source "/Users/mario/.ghcup/env"
-
 # Dotfiles config
 alias config='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 
@@ -62,7 +59,11 @@ alias vim="nvim"
 alias v="nvim"
 
 # Obsidian vault shorthand
-alias ob="cd /Users/mario/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/Vault"
+alias ob="cd /Users/mario/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/Vault/Università/Anno\ 3/Semestre\ 2"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# MySQL Shell
+export PATH=${PATH}:/usr/local/mysql/bin
+export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
