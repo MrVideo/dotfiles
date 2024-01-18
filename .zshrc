@@ -67,3 +67,9 @@ alias ob="cd /Users/mario/Library/Mobile\ Documents/iCloud~md~obsidian/Documents
 # MySQL Shell
 export PATH=${PATH}:/usr/local/mysql/bin
 export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
+
+# Git GPG signing
+export GPG_TTY=$(tty)
+
+# CBC library
+export PMIP_CBC_LIBRARY="/Users/mario/.cbc/dist/lib/libCbc.dylib"
