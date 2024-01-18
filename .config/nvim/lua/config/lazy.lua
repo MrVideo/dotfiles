@@ -3,18 +3,24 @@ require("lazy").setup({
 		"folke/tokyonight.nvim",
 		lazy = false,
 		priority = 1000,
-		opts = {}
+		opts = {
+			transparent = true,
+			on_highlights = function(hl, c)
+				hl.NvimTreeNormal = { bg = "none" }
+				hl.NvimTreeNormalNC = { bg = "none" }
+			end
+		}
 	},
 	{
 		"williamboman/mason.nvim",
 		config = true
 	},
 	"nvim-treesitter/nvim-treesitter",
-	"nvim-lua/plenary.nvim",
-	"nvim-telescope/telescope.nvim",
+	-- "nvim-lua/plenary.nvim",
+	-- "nvim-telescope/telescope.nvim",
 	"nvim-tree/nvim-web-devicons",
 	"nvim-tree/nvim-tree.lua",
-	{'williamboman/mason-lspconfig.nvim'},
+	{ 'williamboman/mason-lspconfig.nvim' },
 	{
 		'VonHeikemen/lsp-zero.nvim',
 		branch = 'v3.x',
@@ -57,12 +63,22 @@ require("lazy").setup({
 			})
 		end
 	},
-	{'neovim/nvim-lspconfig'},
-	{'hrsh7th/cmp-nvim-lsp'},
-	{'hrsh7th/nvim-cmp'},
-	{'L3MON4D3/LuaSnip'},
-	{'nvim-lualine/lualine.nvim'},
-	{ "folke/neodev.nvim", opts = {} }
+	{ 'neovim/nvim-lspconfig' },
+	{ 'hrsh7th/cmp-nvim-lsp' },
+	{ 'hrsh7th/nvim-cmp' },
+	{ 'L3MON4D3/LuaSnip' },
+	{ 'nvim-lualine/lualine.nvim' },
+	{ 'folke/neodev.nvim', opts = {} },
+	{
+	  'iamcco/markdown-preview.nvim',
+	  cmd = { 'MarkdownPreviewToggle', 'MarkdownPreview', 'MarkdownPreviewStop' },
+	  build = "cd app && yarn install",
+	  init = function()
+		vim.g.mkdp_filetypes = { "markdown" }
+	  end,
+	  ft = { 'markdown' },
+	},
+	{ 'andweeb/presence.nvim' },
 })
 
 vim.cmd.colorscheme("tokyonight")
@@ -116,11 +132,11 @@ vim.g.loaded_netrwPlugin = 1
 vim.opt.termguicolors = true
 
 -- empty setup using defaults
-require("nvim-tree").setup()
+require('nvim-tree').setup()
 
 -- OR setup with some options
-require("nvim-tree").setup({
-  sort_by = "case_sensitive",
+require('nvim-tree').setup({
+  sort_by = 'case_sensitive',
   view = {
     width = 30,
   },
@@ -133,7 +149,7 @@ require("nvim-tree").setup({
 })
 
 -- IMPORTANT: make sure to setup neodev BEFORE lspconfig
-require("neodev").setup({
+require('neodev').setup({
   -- add any options here, or leave empty to use the default settings
 })
 
@@ -145,14 +161,14 @@ lspconfig.lua_ls.setup({
   settings = {
     Lua = {
       completion = {
-        callSnippet = "Replace"
+        callSnippet = 'Replace'
       }
     }
   }
 })
 
 -- IMPORTANT: make sure to setup neodev BEFORE lspconfig
-require("neodev").setup({
+require('neodev').setup({
   -- add any options here, or leave empty to use the default settings
 })
 
@@ -164,7 +180,7 @@ lspconfig.lua_ls.setup({
   settings = {
     Lua = {
       completion = {
-        callSnippet = "Replace"
+        callSnippet = 'Replace'
       }
     }
   }
