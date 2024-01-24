@@ -32,3 +32,6 @@ vim.opt.clipboard = 'unnamedplus'
 vim.keymap.set("n", "<C-t>", ":NvimTreeToggle<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<C-u>", "<C-u>zz", { silent = true })
 vim.keymap.set("n", "<C-d>", "<C-d>zz", { silent = true })
+
+-- Column limit line
+vim.opt.colorcolumn = "80"
