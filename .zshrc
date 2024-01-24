@@ -37,7 +37,7 @@ export PATH="$PATH:/usr/local/texlive/2020/texmf-dist/doc/info"
 export PATH="$PATH:/usr/local/texlive/2020/bin/x86_64-darwin"
 
 # Dotfiles config
-alias config='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
+alias dotfiles='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 
 # Python 3.10
 export PATH="/opt/homebrew/opt/python@3.10/bin:$PATH"
